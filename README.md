@@ -108,23 +108,77 @@ No server needed either way.
 
 ---
 
-## 5. Publish it (free hosting)
+## 5. Publish it on GitHub Pages
 
-Pick one — both give free HTTPS and let you connect `pebbleflowrv.com`:
+The repo is already initialized and committed on branch `main`, with the remote set to
+`https://github.com/quampy20/PebbleFlowRV.git`.
 
-**Netlify (easiest):**
-1. Go to https://app.netlify.com/drop
-2. Drag the whole `PebbleFlowRV` folder onto the page.
-3. It's live instantly on a temporary URL. In **Site settings → Domain management**, add `pebbleflowrv.com` and follow the DNS steps at your domain registrar.
+### Step 1 — Push the code
 
-**Vercel:**
-1. Install the Vercel CLI (`npm i -g vercel`) or use the dashboard.
-2. From this folder run `vercel` (or drag-and-drop / connect a Git repo).
-3. Add your domain under **Project → Settings → Domains**.
+From the `PebbleFlowRV` folder:
 
-**Cloudflare Pages** works the same way and is also free.
+```
+git push -u origin main
+```
 
-> After deploying, submit your site and `sitemap.xml` to **Google Search Console** so pages get indexed — that's how the ad-earning traffic starts.
+Refresh the repo page on GitHub; you should see all the files.
+
+### Step 2 — Check your repo visibility ⚠️
+
+**GitHub Pages only works on private repos if you have a paid plan (GitHub Pro or higher).**
+On the free plan, the repo must be **public**.
+
+- Free plan → **Settings → General → Danger Zone → Change visibility → Make public**
+- GitHub Pro → leave it private, Pages will work
+
+Either way, **the published website itself is public.** Making the repo public only additionally
+exposes the source files — which for a static site is just the HTML/CSS you're already serving.
+
+### Step 3 — Turn on Pages
+
+1. In the repo, go to **Settings → Pages** (left sidebar).
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**.
+3. **Branch:** `main`, **Folder:** `/ (root)`. Click **Save**.
+4. Wait 1–2 minutes. The page will show your live URL:
+   `https://quampy20.github.io/PebbleFlowRV/`
+
+No build step is needed — this is plain HTML, which is exactly what Pages serves.
+
+### Step 4 — Point pebbleflowrv.com at it
+
+At your **domain registrar's DNS settings**, add these five records:
+
+| Type | Name | Value |
+|------|------|-------|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `quampy20.github.io.` |
+
+Then back in **Settings → Pages → Custom domain**, enter `pebbleflowrv.com` and **Save**.
+GitHub commits a `CNAME` file to the repo for you — run `git pull` afterward to stay in sync.
+
+DNS can take anywhere from a few minutes to 24 hours. Once GitHub shows "DNS check successful,"
+tick **Enforce HTTPS** (free certificate).
+
+### Step 5 — Publishing updates
+
+Every push to `main` redeploys automatically, usually within a minute:
+
+```
+git add -A
+git commit -m "Add new post"
+git push
+```
+
+> After going live, submit the site and `sitemap.xml` to **Google Search Console** so pages get
+> indexed — that's how the ad-earning traffic starts.
+
+### Alternatives
+
+**Netlify** (https://app.netlify.com/drop — drag the folder in) and **Cloudflare Pages** are also
+free, work with private repos on their free tiers, and connect a custom domain the same way.
 
 ---
 
