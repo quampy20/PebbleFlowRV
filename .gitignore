@@ -1,0 +1,21 @@
+# --- Source images (large originals, not used by the site) ---
+# The optimized versions live in assets/img/ and ARE committed.
+# These full-size originals stay on your machine only.
+/*.png
+/*.webp
+/*.psd
+assets/img/hero-pebble-flow.png
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# --- Temp ---
+.__wtest
+*.log
+node_modules/
