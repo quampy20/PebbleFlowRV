@@ -19,3 +19,7 @@ desktop.ini
 .__wtest
 *.log
 node_modules/
+
+# local design preview (not published)
+PREVIEW-theme.html
+PREVIEW-compare.html
