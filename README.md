@@ -6,26 +6,36 @@ A fast, modern, static fan site for the **Pebble Flow** electric RV — built to
 
 ## 1. What's in the box
 
+Every page lives in its own folder as `index.html`, so URLs are clean
+(`/features/` rather than `/features.html`). This works identically on any host.
+
 ```
 PebbleFlowRV/
-├── index.html            Home page (hero, features, latest posts)
-├── specs.html            Full spec sheet + pricing + warranty
-├── features.html         Feature deep-dives (Magic Hitch, InstaCamp, etc.)
-├── comparison.html       Electric vs. gas RV comparison
-├── blog.html             Blog index (add new post cards here)
-├── about.html            About + legal disclaimer + "Contribute"
-├── privacy.html          Privacy policy (required for AdSense)
-├── robots.txt
-├── sitemap.xml           List every page here for SEO
+├── index.html                    →  /              Home
+├── specs/index.html              →  /specs/        Spec sheet + pricing
+├── features/index.html           →  /features/     Feature deep-dives
+├── comparison/index.html         →  /comparison/   Electric vs. gas
+├── pebble-ai/index.html          →  /pebble-ai/    AI concept gallery
+├── blog/index.html               →  /blog/         Blog index
+├── about/index.html              →  /about/        About + disclaimer
+├── privacy/index.html            →  /privacy/      Privacy policy
 ├── posts/
-│   ├── pebble-flow-first-look.html   (image-commentary template)
-│   ├── magic-hitch-explained.html    (video-embed template)
-│   └── electric-vs-gas-rv-cost.html  (analysis template)
+│   ├── pebble-flow-first-look/index.html    (image-commentary template)
+│   ├── magic-hitch-explained/index.html     (video-embed template)
+│   └── electric-vs-gas-rv-cost/index.html   (analysis template)
+├── *.html                        redirect stubs for the old .html URLs
+├── CNAME                         custom domain (managed by GitHub)
+├── robots.txt
+├── sitemap.xml                   list every page here for SEO
 └── assets/
-    ├── css/style.css     One stylesheet for the whole site
-    ├── js/main.js        Menu, animations, newsletter (no dependencies)
-    └── img/favicon.svg
+    ├── css/style.css             One stylesheet for the whole site
+    ├── js/main.js                Menu, animations, newsletter (no dependencies)
+    └── img/                      photos + favicon
 ```
+
+**Adding a page:** create `your-page/index.html`. Link to it as `your-page/`
+from the root, or `../your-page/` from inside another folder. Assets are
+`../assets/…` one level deep, `../../assets/…` from a post.
 
 To preview locally, just double-click `index.html` — it works straight from disk.
 
@@ -38,7 +48,7 @@ The ad slots are already placed and sized (header leaderboard, in-content, sideb
 **To go live:**
 
 1. Apply at **https://www.google.com/adsense** and get approved (you'll need a live domain and some content — this site gives you both).
-2. In **every** `.html` file, find this block in the `<head>` and uncomment it, replacing `ca-pub-XXXXXXXXXXXXXXXX` with your publisher ID:
+2. In **every** page's `index.html`, find this block in the `<head>` and uncomment it, replacing `ca-pub-XXXXXXXXXXXXXXXX` with your publisher ID:
    ```html
    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
    ```
@@ -53,34 +63,34 @@ The ad slots are already placed and sized (header leaderboard, in-content, sideb
 
 ## 3. Write a new blog post (3 steps)
 
-1. **Copy** any file in `posts/` (e.g. `pebble-flow-first-look.html`) and rename it, e.g. `posts/my-road-trip.html`. Keep filenames lowercase-with-dashes.
+1. **Copy** any folder in `posts/` (e.g. `posts/pebble-flow-first-look/`) and rename it, e.g. `posts/my-road-trip/`. Keep folder names lowercase-with-dashes — the folder name becomes the URL (`/posts/my-road-trip/`).
 2. **Edit** the `<title>`, `<h1>`, the `<meta name="description">`, and the article body. Two ready-made building blocks are inside:
    - **Image with commentary** — the `<figure class="figure">` block. Swap the placeholder `<div class="frame">…</div>` for your own `<img src="assets/img/your-photo.jpg" alt="...">` and write your caption/credit in `<figcaption>`.
-   - **Video with commentary** — the `<div class="video-embed">` block in `magic-hitch-explained.html`. Replace the placeholder link with the YouTube iframe (the exact code is commented right there) and add your take below it.
-3. **Link it** on `blog.html`: copy one of the `<article class="post-card">` cards, point it at your new file, and update the title/excerpt. Then add one `<url>` line to `sitemap.xml`.
+   - **Video with commentary** — the `<div class="video-embed">` block in `posts/magic-hitch-explained/index.html`. Replace the placeholder link with the YouTube iframe (the exact code is commented right there) and add your take below it.
+3. **Link it** on `blog/index.html`: copy one of the `<article class="post-card">` cards, point it at your new file, and update the title/excerpt. Then add one `<url>` line to `sitemap.xml`.
 
 ### Adding your own images
-Put photos in `assets/img/` and reference them with `assets/img/filename.jpg` (from a page in `posts/`, use `../assets/img/filename.jpg`).
+Put photos in `assets/img/` and reference them by depth: `assets/img/x.jpg` from the home page, `../assets/img/x.jpg` from a section folder, `../../assets/img/x.jpg` from a post.
 
-**Copyright reminder:** use your own photos, licensed images, or owner-submitted photos with permission. Don't re-host Pebble's marketing images — link to their gallery instead. Embed YouTube videos only when embedding is enabled, and always credit the creator. (More in `about.html`.)
+**Copyright reminder:** use your own photos, licensed images, or owner-submitted photos with permission. Don't re-host Pebble's marketing images — link to their gallery instead. Embed YouTube videos only when embedding is enabled, and always credit the creator. (More on the About page.)
 
 ---
 
 ## 3b. Adding renders to the Pebble AI gallery
 
-`pebble-ai.html` is a filterable gallery of AI-imagined Flow concepts. It ships with your two real renders plus **empty slots**, each showing a ready-to-use prompt.
+`pebble-ai/index.html` is a filterable gallery of AI-imagined Flow concepts. It ships with your two real renders plus **empty slots**, each showing a ready-to-use prompt.
 
 **To fill a slot:**
 
 1. Generate the image (Midjourney, DALL·E, Firefly, whatever). Each slot has a **Copy prompt** button with a prompt already written for it.
 2. Save it to `assets/img/` — e.g. `ai-forest-green.jpg`. Keep it under ~400 KB (JPEG quality ~85, about 1600px wide).
-3. In `pebble-ai.html`, find that slot's `<figure class="tile tile-slot" ...>` and replace it with a real tile:
+3. In `pebble-ai/index.html`, find that slot's `<figure class="tile tile-slot" ...>` and replace it with a real tile:
 
 ```html
 <figure class="tile" data-cat="exterior color">
-  <a class="tile-img" data-lightbox href="assets/img/ai-forest-green.jpg">
+  <a class="tile-img" data-lightbox href="../assets/img/ai-forest-green.jpg">
     <span class="tile-badge">Forest green</span>
-    <img src="assets/img/ai-forest-green.jpg" alt="Forest green Pebble Flow concept among pines" loading="lazy" />
+    <img src="../assets/img/ai-forest-green.jpg" alt="Forest green Pebble Flow concept among pines" loading="lazy" />
   </a>
   <figcaption class="tile-cap">
     <h3><span class="swatch" style="background:#2f4a35"></span>Forest Green</h3>
