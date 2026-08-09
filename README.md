@@ -53,15 +53,22 @@ choose how aggressive the placement should be. Changes take effect within an hou
 or so; no code edits required.
 
 ### Using the built-in manual placements instead
-Four hand-placed slots already exist (header leaderboard, in-content, sidebar
-rectangle) and currently show a labelled "Advertisement" placeholder. To activate one:
+Hand-placed slots already exist (header leaderboard, in-content, sidebar
+rectangle). They are **hidden** by default so Auto ads can own the layout —
+each one reveals itself automatically as soon as it contains a real ad unit.
+To activate one:
 
 1. In AdSense → **Ads → By ad unit**, create a display unit and copy its
    `data-ad-slot` number.
 2. In the page, find that `.ad-slot` block. The `<ins>` code is already there,
    commented out, with your publisher ID filled in.
 3. Paste the slot number into `data-ad-slot="…"`, uncomment the block, and delete
-   the `<span class="ad-placeholder">…</span>` line above it.
+   the `<span class="ad-placeholder">…</span>` line above it. The slot becomes
+   visible on its own — no CSS edit needed.
+
+**Comments sections** are hidden too (`#comments { display:none }` in the
+stylesheet), because their current text is setup guidance rather than something
+readers should see. Delete that one rule when you install Disqus or Giscus.
 
 Manual units give exact control; Auto ads are less work. Running both is possible
 but tends to feel crowded on a young site.

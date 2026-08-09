@@ -327,23 +327,39 @@ section { padding: clamp(64px, 8vw, 120px) 0; position: relative; }
 .pill.clay { background: rgba(34,49,29,.07); color:#304529; border-color: rgba(74,103,65,.30); }
 .pill.sand { background: rgba(34,49,29,.05); color: var(--ink-2); border-color: var(--line-2); }
 
-/* ----------  Ad slots  ---------- */
-.ad-slot {
-  position:relative; margin:0 auto; text-align:center; min-height:100px;
-  display:flex; align-items:center; justify-content:center;
-  border:1px dashed #d5cfbc; border-radius: var(--radius-sm);
-  background: rgba(34,49,29,.02); color: var(--ink-3); overflow:hidden;
+/* ----------  Ad slots  ----------
+   Placeholders are HIDDEN so Auto ads owns the page layout. A slot reveals
+   itself automatically the moment it contains a real <ins class="adsbygoogle">.
+
+   To switch a slot to a manual ad unit:
+     1. paste your data-ad-slot into the commented <ins> block in that page
+     2. uncomment it
+     3. delete the <span class="ad-placeholder">…</span> line above it
+   No CSS change needed — the rules below handle the rest.               */
+.ad-slot { display:none; }
+
+/* a slot holding a real ad unit becomes visible, with no dashed frame */
+.ad-slot:has(.adsbygoogle),
+.ad-slot.has-ad {
+  display:block; position:relative; margin:0 auto; text-align:center;
+  border:0; background:none; min-height:0; overflow:visible;
 }
-.ad-slot::before {
-  content:"Advertisement"; position:absolute; top:9px; left:14px;
-  font-family:var(--font-display); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color: var(--ink-3);
+.ad-slot:has(.adsbygoogle)::before,
+.ad-slot.has-ad::before {
+  content:"Advertisement"; display:block;
+  font-family:var(--font-display); font-size:.6rem; letter-spacing:.2em;
+  text-transform:uppercase; color: var(--ink-3); margin-bottom:6px;
 }
 .ad-slot .ad-placeholder { font-family:var(--font-display); font-size:.84rem; color: var(--ink-3); padding:12px; }
 .ad-slot .adsbygoogle { display:block; width:100%; }
-.ad-slot.has-ad { border:0; background:none; min-height:0; }
-.ad-leaderboard { max-width:970px; min-height:100px; }
-.ad-inline { max-width:728px; min-height:120px; margin:44px auto; }
-.ad-rect { max-width:336px; min-height:280px; }
+.ad-leaderboard { max-width:970px; }
+.ad-inline { max-width:728px; margin:44px auto; }
+.ad-rect { max-width:336px; }
+
+/* Comments section is hidden until a real embed is installed — its current
+   copy is setup guidance, not reader-facing content. When you add Disqus or
+   Giscus, delete this one rule and the section appears. */
+#comments { display:none; }
 
 /* Sidebar */
 .with-sidebar { display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:48px; align-items:start; }
