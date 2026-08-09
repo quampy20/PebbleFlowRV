@@ -41,23 +41,33 @@ To preview locally, just double-click `index.html` — it works straight from di
 
 ---
 
-## 2. Turn on ads (Google AdSense)
+## 2. Ads (Google AdSense)
 
-The ad slots are already placed and sized (header leaderboard, in-content, sidebar rectangle). Until you add real ad code, each shows a labeled **"Advertisement"** placeholder so the layout looks right.
+**Your publisher ID is already installed:** `ca-pub-8517278297185534`.
+The loader script sits in the `<head>` of all 11 pages, so the site is verified
+and ready for **Auto ads** — Google places them for you, nothing further needed.
 
-**To go live:**
+### Turning on Auto ads
+In AdSense → **Ads → By site → pebbleflowrv.com → Edit**, switch Auto ads on and
+choose how aggressive the placement should be. Changes take effect within an hour
+or so; no code edits required.
 
-1. Apply at **https://www.google.com/adsense** and get approved (you'll need a live domain and some content — this site gives you both).
-2. In **every** page's `index.html`, find this block in the `<head>` and uncomment it, replacing `ca-pub-XXXXXXXXXXXXXXXX` with your publisher ID:
-   ```html
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-   ```
-   (It's spelled out in `index.html`; add the same line to the other pages' `<head>`.)
-3. In each ad slot, delete the `<span class="ad-placeholder">…</span>` line and uncomment the `<ins class="adsbygoogle">…</ins>` block right below it. Replace `data-ad-slot="…"` with the slot ID from your AdSense dashboard.
+### Using the built-in manual placements instead
+Four hand-placed slots already exist (header leaderboard, in-content, sidebar
+rectangle) and currently show a labelled "Advertisement" placeholder. To activate one:
 
-> Tip: keep the placeholder look while you wait for approval — reviewers want to see finished pages, and empty ad code shows nothing.
+1. In AdSense → **Ads → By ad unit**, create a display unit and copy its
+   `data-ad-slot` number.
+2. In the page, find that `.ad-slot` block. The `<ins>` code is already there,
+   commented out, with your publisher ID filled in.
+3. Paste the slot number into `data-ad-slot="…"`, uncomment the block, and delete
+   the `<span class="ad-placeholder">…</span>` line above it.
 
-**Other ad networks** (Ezoic, Mediavine, Raptive) work the same way: paste their tag in `<head>` and their slot code where the placeholders are. Mediavine/Raptive require higher traffic; AdSense is the easiest start.
+Manual units give exact control; Auto ads are less work. Running both is possible
+but tends to feel crowded on a young site.
+
+> If ads don't appear at first, that's normal — a new site can take a few days to
+> start serving while Google reviews it, and ad blockers hide them entirely.
 
 ---
 
