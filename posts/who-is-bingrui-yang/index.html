@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fdfcf8" />
+  <title>Who Is Bingrui Yang? The Apple Engineer Behind the Pebble Flow | PebbleFlowRV</title>
+  <meta name="description" content="Bingrui Yang spent nine years leading iPhone development at Apple, then built hardware for Cruise and Zoox. A miserable family RV trip in 2020 led him to found Pebble. Here's his background and where the Flow's design came from." />
+  <link rel="canonical" href="https://pebbleflowrv.com/posts/who-is-bingrui-yang/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Who Is Bingrui Yang? The Apple Engineer Behind the Pebble Flow" />
+  <meta property="og:description" content="From iPhone to robotaxis to an electric trailer — the founder's path, and where the design came from." />
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <meta name="google-adsense-account" content="ca-pub-8517278297185534" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8517278297185534"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="disclaimer-strip">
+    <b>Independent fan site.</b> Not affiliated with, authorized by, or endorsed by Pebble Mobility Inc.
+  </div>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Primary">
+      <a class="brand" href="../../">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a6741"/><stop offset="1" stop-color="#22311d"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#lg1)"/><circle cx="46" cy="20" r="6" fill="#fff" opacity=".9"/><path d="M12 41c0-9 7-15 18-15 10 0 22 5 22 13 0 3-1 5-3 5H15c-2 0-3-1-3-3z" fill="#22311d"/><rect x="20" y="31" width="12" height="7" rx="2" fill="#c6d3c1"/><circle cx="24" cy="46" r="4.4" fill="#22311d"/><circle cx="24" cy="46" r="1.7" fill="#c6d3c1"/><circle cx="40" cy="46" r="4.4" fill="#22311d"/><circle cx="40" cy="46" r="1.7" fill="#c6d3c1"/></svg>
+        Pebble<b>Flow</b>RV
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../../">Home</a></li>
+        <li><a href="../../features/">Features</a></li>
+        <li><a href="../../pebble-ai/">Pebble AI</a></li>
+        <li><a href="../../blog/" class="active">Blog</a></li>
+        <li><a href="../../about/">About</a></li>
+        <li class="nav-cta"><a class="btn btn-primary btn-sm" href="../../about/#contribute">Contribute</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <p class="breadcrumb"><a href="../../">Home</a> &rsaquo; <a href="../../blog/">Blog</a> &rsaquo; The founder</p>
+  </div>
+
+  <article>
+    <header class="article-header page-head fade-up" style="padding-bottom:0">
+      <div class="tag-row" style="margin-bottom:16px"><span class="pill">Profile</span><span class="pill sand">Founder</span></div>
+      <h1>Who is Bingrui Yang, the Apple engineer who decided RVs were broken?</h1>
+      <p class="lede">Nine years leading iPhone development. Hardware chief at two robotaxi companies. Then one bad family camping trip in the summer of 2020 &mdash; and a decision to rebuild the travel trailer from scratch.</p>
+      <div class="byline">
+        <div class="avatar">PF</div>
+        <div class="who"><b>PebbleFlowRV Team</b><span>August 2026 &middot; 10 min read</span></div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="ad-slot ad-leaderboard" aria-label="Advertisement" style="margin-top:32px">
+        <span class="ad-placeholder">Leaderboard ad &middot; 970&times;90</span>
+        <!-- AdSense leaderboard -->
+      </div>
+    </div>
+
+    <div class="container with-sidebar" style="padding-top:48px">
+      <div class="article-body">
+
+        <p>Most RV companies are founded by RV people. Pebble was founded by someone who took one trip and came home irritated.</p>
+
+        <p>That detail explains more about the Pebble Flow than any spec on the sheet. It is not a trailer designed by someone who loves trailers and wanted to make a nicer one. It&rsquo;s a trailer designed by a consumer-electronics engineer who looked at the category, decided the fundamental user experience was broken, and rebuilt it using the toolkit he had &mdash; which happened to be the iPhone and self-driving cars.</p>
+
+        <h2 id="apple">Nine years on the iPhone</h2>
+
+        <p>Bingrui Yang holds a degree from Columbia University and spent roughly nine years at Apple, where he rose through engineering roles &mdash; hardware electrical engineer, engineering manager, senior engineering manager &mdash; leading iPhone development. <a href="https://techcrunch.com/2023/06/13/pebble-mobility-wants-to-build-the-iphone-of-electric-rvs/" rel="nofollow noopener" target="_blank">TechCrunch</a> described him as someone who &ldquo;knows a thing or two about hardware, software and how people interact with them.&rdquo;</p>
+
+        <p>That last part matters most. Apple&rsquo;s institutional obsession isn&rsquo;t really components &mdash; it&rsquo;s the seam between hardware and the person holding it. Nine years inside that culture is nine years of treating &ldquo;the user has to read a manual&rdquo; as a design failure rather than a fact of life.</p>
+
+        <p>Yang has been fairly direct that this is the standard he brought with him. Speaking to TechCrunch, he put the goal in one sentence:</p>
+
+        <blockquote>&ldquo;If someone can use an iPhone, they&rsquo;ll be able to use this.&rdquo;</blockquote>
+
+        <h2 id="robotaxis">Then robotaxis</h2>
+
+        <p>After Apple, Yang moved into autonomy. He was Director and Head of Advanced Hardware Engineering at <strong>Zoox</strong> from January 2019 to October 2020, then led AV hardware systems at <strong>Cruise</strong>, GM&rsquo;s self-driving division.</p>
+
+        <p>This second act is the less obvious half of the Flow&rsquo;s DNA, and arguably the more important one. Self-hitching and remote parking aren&rsquo;t RV features that someone bolted on &mdash; they&rsquo;re downstream of a decade of work on vehicles that perceive their surroundings and position themselves. Magic Hitch is a small, tightly-scoped autonomy problem solved by people who spent years on much harder versions of it.</p>
+
+        <p>The rest of the founding team follows the same pattern. CTO <strong>Stefan Solyom</strong> was a founding member of the Tesla Autopilot team, and before that spent seven years at Apple and ten at Volvo Cars working on safety and autonomous systems. Early staff came from Apple, Cruise, Lucid Motors and Tesla. Almost nobody came from the RV industry.</p>
+
+        <h2 id="trip">The trip that started it</h2>
+
+        <p>In the summer of 2020, with the pandemic closing off most other kinds of travel, Yang took his family on an RV trip.</p>
+
+        <p>By his account, the family had a great time. He did not. TechCrunch reported he was &ldquo;inspired by his own time in RVs, a product experience he hated.&rdquo; The vacation worked; the product got in the way of it.</p>
+
+        <p>Anyone who has rented an RV recognises the specific texture of that frustration. Every subsystem has its own control panel and its own logic. Setting up camp is a checklist. Backing into a site requires a spotter and a certain tolerance for public marital conflict. None of it is hard exactly &mdash; it&rsquo;s just tedious, and the tedium is concentrated at exactly the moments you were hoping to relax.</p>
+
+        <p>Yang founded Pebble Mobility in 2022. His framing of the opportunity has stayed consistent since:</p>
+
+        <blockquote>&ldquo;Consumers have been stuck with the same RV experience for decades. A lot of people want to get into such a lifestyle of freedom but are turned off by the pain points in today&rsquo;s products.&rdquo;</blockquote>
+
+        <p>He also connected it to something broader &mdash; that remote and flexible work had changed who wants a vehicle like this. &ldquo;We&rsquo;ve seen a profound shift in how people live and work,&rdquo; he told TechCrunch, pointing at the digital-nomad audience that traditional RV design never really addressed.</p>
+
+        <div class="ad-slot ad-inline" aria-label="Advertisement">
+          <span class="ad-placeholder">In-content ad &middot; 728&times;90</span>
+          <!-- AdSense in-content -->
+        </div>
+
+        <h2 id="design">Where the design came from</h2>
+
+        <p>The Flow&rsquo;s look didn&rsquo;t come from Yang alone. Pebble&rsquo;s head of design is <strong>Page Beermann</strong>, previously of Faraday Future and BMW &mdash; and, as <a href="https://www.fastcompany.com/90961443/apple-and-volvo-alums-designed-rv-of-the-future" rel="nofollow noopener" target="_blank">Fast Company</a> noted, someone with an unusually direct qualification for the job: from ages two to five, Beermann lived in a Volkswagen van while his parents toured the world in it.</p>
+
+        <p>Beermann&rsquo;s diagnosis of the category echoes Yang&rsquo;s:</p>
+
+        <blockquote>&ldquo;Traditional RVs are pretty hard to use &mdash; they have a lot of disparate subsystems that all have their own control interfaces, and they&rsquo;re quite challenging to operate. They haven&rsquo;t really come into the modern era yet.&rdquo;</blockquote>
+
+        <p>Three influences show up clearly in the finished trailer:</p>
+
+        <p><strong>Aerodynamics, treated as a first-order constraint.</strong> Pebble claims the Flow is about 300% more aerodynamic than a conventional travel trailer. That shape isn&rsquo;t styling &mdash; it&rsquo;s the reason nothing protrudes from the roof, no air conditioner hump, no wind dams. On an electric trailer towed by an electric truck, drag is the enemy that matters most.</p>
+
+        <p><strong>Consumer electronics, not coachbuilding.</strong> An aluminium space frame, obsessive weight reduction, and a single on-board tablet controlling the whole vehicle rather than a wall of separate panels. Beermann described the leap as being &ldquo;like taking a 20-year leap from one product to the next&rdquo; in consumer-electronics terms.</p>
+
+        <p><strong>The tiny-home movement.</strong> Fast Company noted the influence directly &mdash; dual-purpose everything, because 150 square feet doesn&rsquo;t forgive single-use objects. The Murphy bed folds into a desk. The induction cooktop lifts out and works outside, a detail Beermann designed because, as a hobby cook, he was tired of being stuck indoors at the stove while everyone else sat by the fire.</p>
+
+        <p>And then the 270-degree wraparound glass, which is the one element that reads as pure design confidence. It&rsquo;s the reason the interior feels like a room with a view rather than a corridor, and it&rsquo;s why the optional smart privacy glass exists at all.</p>
+
+        <h2 id="funding">Money and momentum</h2>
+
+        <p>Pebble emerged from stealth in mid-2023 with <strong>$13.6 million</strong> in seed and Series A funding from Lightspeed, Vision+ and UpHonest Capital, with about ten full-time employees at the time.</p>
+
+        <p>The Flow was revealed in October 2023, shown publicly at the LA Auto Show that November, and a production-intent version was unveiled at CES in January 2025 with pricing: $109,500 for the Standard, $135,500 with the Magic Pack, $175,000 for the Founders Edition.</p>
+
+        <h2 id="matters">Why the background matters</h2>
+
+        <p>It would be easy to read &ldquo;ex-Apple founder disrupts RVs&rdquo; as a punchline. Plenty of consumer-electronics people have wandered into heavy manufacturing and discovered that welding is harder than firmware.</p>
+
+        <p>But the specific combination here is unusual and coherent. The iPhone years explain why a trailer would have one interface instead of nine. The Zoox and Cruise years explain why it can park itself. The bad 2020 camping trip explains why anyone thought those were the problems worth solving.</p>
+
+        <p>Whether that produces a durable company is a separate question, and an open one &mdash; long-term reliability, service coverage and resale value are all unproven for a young manufacturer. But the design brief was clearly written by someone who was annoyed in a very particular way, and you can feel that in the product.</p>
+
+        <div class="callout" style="margin:2em 0">
+          <p class="eyebrow" style="margin-bottom:.5rem">Why this site exists</p>
+          <p style="margin:0 0 .8em">Our own version of Yang&rsquo;s origin story is much less dramatic. A friend invited us to go camping in the Sierras for a weekend. I did some idle research, and a Pebble Flow ad turned up in my Reddit feed. I clicked through to their site and that was that &mdash; hooked.</p>
+          <p style="margin:0">My wife and I got as far as seriously discussing a purchase before buying a house instead, about a year ago. The Flow is still on the list. Until then, this site is where we keep track of it.</p>
+        </div>
+
+        <p class="muted" style="font-size:.85rem"><em>Sources: career history, founding story, funding and quotes from Kirsten Korosec&rsquo;s reporting for <a href="https://techcrunch.com/2023/06/13/pebble-mobility-wants-to-build-the-iphone-of-electric-rvs/" rel="nofollow noopener" target="_blank">TechCrunch</a>; design team background, Page Beermann quotes and interior design detail from Zachary Petit&rsquo;s reporting for <a href="https://www.fastcompany.com/90961443/apple-and-volvo-alums-designed-rv-of-the-future" rel="nofollow noopener" target="_blank">Fast Company</a>; additional company detail from <a href="https://pebblelife.com/post/former-apple-tesla-and-zoox-execs-unveil-pebble" rel="nofollow noopener" target="_blank">Pebble&rsquo;s launch announcement</a> and <a href="https://www.businesswire.com/news/home/20250106838084/en/Pebble-Unveils-the-Production-Intent-Pebble-Flow-The-Next-Generation-of-All-Electric-RVing" rel="nofollow noopener" target="_blank">its CES 2025 release</a>. This is an independent fan profile compiled from public reporting; Mr. Yang was not interviewed for it.</em></p>
+
+        <hr class="divider" style="margin:2.4em 0" />
+        <div id="comments">
+          <h3>Join the conversation</h3>
+          <p class="muted" style="font-size:.95rem">Comment embed goes here.</p>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="ad-slot ad-rect" aria-label="Advertisement">
+          <span class="ad-placeholder">Sidebar ad &middot; 300&times;250</span>
+          <!-- AdSense sidebar rectangle -->
+        </div>
+        <div class="card">
+          <p class="eyebrow" style="margin-bottom:.6rem">In this post</p>
+          <ul style="list-style:none;padding:0;margin:0;font-size:.92rem;line-height:1.9">
+            <li><a href="#apple">Nine years on the iPhone</a></li>
+            <li><a href="#robotaxis">Then robotaxis</a></li>
+            <li><a href="#trip">The trip that started it</a></li>
+            <li><a href="#design">Where the design came from</a></li>
+            <li><a href="#funding">Money and momentum</a></li>
+            <li><a href="#matters">Why it matters</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="eyebrow" style="margin-bottom:.6rem">Quick facts</p>
+          <table class="spec-table" style="font-size:.88rem">
+            <tr><th>Education</th><td>Columbia</td></tr>
+            <tr><th>Apple</th><td>~9 years</td></tr>
+            <tr><th>Then</th><td>Zoox, Cruise</td></tr>
+            <tr><th>Founded Pebble</th><td>2022</td></tr>
+            <tr><th>Seed + A</th><td>$13.6M</td></tr>
+          </table>
+        </div>
+      </aside>
+    </div>
+
+    <section class="section-tight">
+      <div class="container">
+        <h2 style="margin-bottom:24px">Keep reading</h2>
+        <div class="grid grid-3">
+          <article class="card post-card hover">
+            <a href="../pebble-flow-accessories-worth-it/" class="post-thumb"><span class="pill">Buying guide</span>
+              <svg viewBox="0 0 120 70" fill="none" stroke="#4a6741" stroke-width="2.4"><rect x="24" y="18" width="72" height="34" rx="5"/><path d="M36 34h20M36 42h34"/></svg></a>
+            <div class="post-body"><h3><a href="../pebble-flow-accessories-worth-it/">Which accessories are worth it</a></h3><a class="btn btn-ghost btn-sm" href="../pebble-flow-accessories-worth-it/">Read</a></div>
+          </article>
+          <article class="card post-card hover">
+            <a href="../will-electric-replace-traditional-camping/" class="post-thumb"><span class="pill sand">Analysis</span>
+              <svg viewBox="0 0 120 70" fill="none" stroke="#4a6741" stroke-width="2.4"><path d="M20 52V30M45 52V20M70 52V34M95 52V14"/><path d="M14 52h94"/></svg></a>
+            <div class="post-body"><h3><a href="../will-electric-replace-traditional-camping/">Will electric replace traditional camping?</a></h3><a class="btn btn-ghost btn-sm" href="../will-electric-replace-traditional-camping/">Read</a></div>
+          </article>
+          <article class="card post-card hover">
+            <a href="../magic-hitch-explained/" class="post-thumb"><span class="pill clay">Video</span>
+              <svg viewBox="0 0 120 70" fill="none" stroke="#4a6741" stroke-width="2.2"><circle cx="60" cy="35" r="20"/><path d="M54 26l16 9-16 9z" fill="#4a6741" stroke="none"/></svg></a>
+            <div class="post-body"><h3><a href="../magic-hitch-explained/">Magic Hitch, explained</a></h3><a class="btn btn-ghost btn-sm" href="../magic-hitch-explained/">Read</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../">
+          <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a6741"/><stop offset="1" stop-color="#22311d"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#lg2)"/><circle cx="46" cy="20" r="6" fill="#fff" opacity=".9"/><path d="M12 41c0-9 7-15 18-15 10 0 22 5 22 13 0 3-1 5-3 5H15c-2 0-3-1-3-3z" fill="#22311d"/><rect x="20" y="31" width="12" height="7" rx="2" fill="#c6d3c1"/><circle cx="24" cy="46" r="4.4" fill="#22311d"/><circle cx="24" cy="46" r="1.7" fill="#c6d3c1"/><circle cx="40" cy="46" r="4.4" fill="#22311d"/><circle cx="40" cy="46" r="1.7" fill="#c6d3c1"/></svg>
+          Pebble<b>Flow</b>RV
+        </a>
+        <p>An independent fan community documenting the all-electric Pebble Flow travel trailer.</p>
+        <p style="margin-top:14px"><a href="mailto:hello@pebbleflowrv.com">hello@pebbleflowrv.com</a></p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="../../specs/">Full specs</a></li><li><a href="../../features/">Features</a></li><li><a href="../../pebble-ai/">Pebble AI</a></li><li><a href="../../blog/">Blog</a></li></ul></div>
+      <div><h4>Official</h4><ul><li><a href="https://pebblelife.com/pebble-flow" rel="nofollow noopener" target="_blank">Pebble Flow &#8599;</a></li><li><a href="https://pebblelife.com/faq" rel="nofollow noopener" target="_blank">Pebble FAQ &#8599;</a></li></ul></div>
+      <div><h4>Site</h4><ul><li><a href="../../about/">About &amp; disclaimer</a></li><li><a href="../../privacy/">Privacy policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p><strong>PebbleFlowRV.com is an independent fan site and is not affiliated with, authorized by, or endorsed by Pebble Mobility Inc.</strong> &ldquo;Pebble&rdquo; and &ldquo;Pebble Flow&rdquo; are trademarks of Pebble Mobility Inc.</p>
+        <p>&copy; <span data-year>2026</span> PebbleFlowRV.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
