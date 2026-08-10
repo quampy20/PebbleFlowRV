@@ -25,6 +25,7 @@ PebbleFlowRV/
 │   └── electric-vs-gas-rv-cost/index.html   (analysis template)
 ├── *.html                        redirect stubs for the old .html URLs
 ├── CNAME                         custom domain (managed by GitHub)
+├── ads.txt                       AdSense authorization (must stay at root)
 ├── robots.txt
 ├── sitemap.xml                   list every page here for SEO
 └── assets/
@@ -72,6 +73,18 @@ readers should see. Delete that one rule when you install Disqus or Giscus.
 
 Manual units give exact control; Auto ads are less work. Running both is possible
 but tends to feel crowded on a young site.
+
+### ads.txt
+`ads.txt` at the site root declares that Google is authorized to sell ads for this
+domain. Without it AdSense reports "Not found" and can restrict ad serving. It holds
+one line:
+
+```
+google.com, pub-8517278297185534, DIRECT, f08c47fec0942fa0
+```
+
+Leave it at the root — it must resolve at `https://pebbleflowrv.com/ads.txt`. If you
+ever add another ad network, add their line beneath this one rather than replacing it.
 
 > If ads don't appear at first, that's normal — a new site can take a few days to
 > start serving while Google reviews it, and ad blockers hide them entirely.
