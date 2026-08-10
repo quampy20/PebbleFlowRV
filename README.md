@@ -45,8 +45,17 @@ To preview locally, just double-click `index.html` — it works straight from di
 ## 2. Ads (Google AdSense)
 
 **Your publisher ID is already installed:** `ca-pub-8517278297185534`.
-The loader script sits in the `<head>` of all 11 pages, so the site is verified
-and ready for **Auto ads** — Google places them for you, nothing further needed.
+Every page's `<head>` carries both AdSense pieces, so the site is verified and
+ready for **Auto ads** — Google places them for you, nothing further needed:
+
+```html
+<meta name="google-adsense-account" content="ca-pub-8517278297185534" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8517278297185534"
+   crossorigin="anonymous"></script>
+```
+
+The meta tag verifies ownership; the script loads ads. Keep both — and if you add
+a new page, copy both lines into its `<head>`.
 
 ### Turning on Auto ads
 In AdSense → **Ads → By site → pebbleflowrv.com → Edit**, switch Auto ads on and
