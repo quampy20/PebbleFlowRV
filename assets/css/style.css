@@ -132,9 +132,10 @@ section { padding: clamp(64px, 8vw, 120px) 0; position: relative; }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .brand { display: inline-flex; align-items: center; color: var(--ink); }
 .brand:hover { color: var(--ink); }
-.brand .logo { display:block; width: clamp(184px, 20vw, 236px); height: auto; }
+.nav > .brand { height: 72px; overflow: hidden; }
+.brand .logo { display:block; width: clamp(240px, 25vw, 300px); height: auto; }
 .footer-brand .brand { padding: 8px 10px; border-radius: 12px; background: var(--bg); }
-.footer-brand .brand .logo { width: min(242px, 100%); }
+.footer-brand .brand .logo { width: min(300px, 100%); }
 .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
 .nav-links a {
   position: relative; display: inline-block; padding: .5em .9em; border-radius: 999px;
@@ -153,7 +154,7 @@ section { padding: clamp(64px, 8vw, 120px) 0; position: relative; }
 .nav-toggle { display:none; background:none; border:0; cursor:pointer; padding:8px; color: var(--ink); }
 .nav-toggle svg { width: 26px; height: 26px; }
 @media (max-width: 900px) {
-  .brand .logo { width: 190px; }
+  .brand .logo { width: 230px; }
   .nav-toggle { display:inline-flex; }
   .nav-links {
     position:absolute; top:72px; left:0; right:0; flex-direction:column; align-items:stretch; gap:2px;
